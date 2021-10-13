@@ -1,6 +1,13 @@
 trigger:
 - '*'
 
+schedules:
+- cron: "0 3 * * 1-5"
+  displayName: M-F at 3 am just for main branch
+  branches:
+    include:
+    - main
+
 pool:
   vmImage: 'ubuntu-20.04'
   demands:
